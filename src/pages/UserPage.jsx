@@ -1,4 +1,4 @@
-import Users from "../components/userlisting/index";
+import Users from "../components/user-listing/index";
 
 const UserPage = () => {
     return (
