@@ -1,42 +1,56 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import 'bootstrap/scss/bootstrap';
+
+/* Custom styles can be added below */
+
+@import 'bootstrap/scss/bootstrap';
+
+// body styling
+body {
+  margin: 0;
+  overflow-x: hidden !important;
+  font-family: "Montserrat", sans-serif !important;
+  background: #fff;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+:root {
+  --color-red: #d51d30;
+  --color-orange: #ffa500;
+  --color-black: #020202;
+  --color-light-black: #333333;
+  --color-gry: #b1b1b1;
+  --color-white: #ffff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+// extra margin styling
+p {
+  margin: 0 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h1 {
+  margin: 0 !important;
 }
 
-.card {
-  padding: 2em;
+h2 {
+  margin: 0 !important;
 }
 
-.read-the-docs {
-  color: #888;
+h3 {
+  margin: 0 !important;
+}
+
+h4 {
+  margin: 0 !important;
+}
+
+h5 {
+  margin: 0 !important;
+}
+
+h6 {
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
 }
