@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import "../assets/scss/header.scss";
 
 const Header = () => {
-    const [toggleMenu, SetToggleMenu] = useState(false);
+    const [toggleMenu, setToggleMenu] = useState(false);
 
     const toggle = () => {
-        SetToggleMenu(!toggleMenu);
+        setToggleMenu(!toggleMenu);
     };
 
     return (
         <div>
-            <div className="top-bar">
-                <div className="toggleMenu" onClick={() => toggle()}>
+            <div className={`top-bar ${toggleMenu ? 'menu-open' : ''}`}>
+                <div className={`toggleMenu ${toggleMenu ? 'active' : ''}`} onClick={() => toggle()}>
                     <div className="bar1"></div>
                     <div className="bar2"></div>
                     <div className="bar3"></div>
@@ -22,7 +22,7 @@ const Header = () => {
                     <div className="row">
                         <div className="col-12 col-md-4 col-lg-3">
                             <div className="logo">
-                                <a href="/homepage">Food Delivery</a>
+                                <a href="/homepage">User Listing App</a>
                             </div>
                         </div>
 
@@ -33,7 +33,7 @@ const Header = () => {
                                         <Link to="/homepage">Home</Link>
                                     </li>
                                     <li>
-                                        <Link to="/studio">Studio</Link>
+                                        <Link to="/users">Users</Link>
                                     </li>
                                     <li>
                                         <Link to="/services">Services</Link>
@@ -41,18 +41,18 @@ const Header = () => {
                                 </ul>
                             </div>
                         </div>
-
-                        {/* mobile side-menu */}
-                        <div className="mobile-nav">
-                            <div id="mySidenav" className={`sidenav ${toggleMenu ? 'active' : ''}`}>
-                                <ul>
-                                    <li><Link to="/homepage">Home</Link></li>
-                                    <li><Link to="/studio">Studio</Link></li>
-                                    <li><Link to="/services">Services</Link></li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
+                </div>
+            </div>
+
+            {/* mobile side-menu */}
+            <div className="mobile-nav">
+                <div id="mySidenav" className={`sidenav ${toggleMenu ? 'active' : ''}`}>
+                    <ul>
+                        <li><Link to="/homepage" onClick={toggle}>Home</Link></li>
+                        <li><Link to="/studio" onClick={toggle}>Studio</Link></li>
+                        <li><Link to="/services" onClick={toggle}>Services</Link></li>
+                    </ul>
                 </div>
             </div>
         </div>
