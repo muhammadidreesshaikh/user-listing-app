@@ -15,7 +15,7 @@ const Users = () => {
             }
         };
         fetchUsers();
-    }, []); 
+    }, []);
 
     return (
         <div>
@@ -29,6 +29,7 @@ const Users = () => {
                     </div>
                 </div>
             </div>
+            
             {/* users grid */}
             <div className="users-grid">
                 <div className="container">
